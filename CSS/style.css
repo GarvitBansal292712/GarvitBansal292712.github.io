@@ -404,13 +404,35 @@ button.categorybtns:active{
   padding: 8px;
   border-radius: 8px;
   margin-top: 10px;
+  transition: 0.5s;
 }
 
 .projectlink:hover{
+  background-color: black;
+  color: white;
+}
+
+.projectlink:hover .githublogo{
+  display: none;
   color: white;
   background-color: #000000;
-  transition: 0.5s;
 }
+
+/* .githublogo{
+  display: none;
+} */
+#githubicon{
+  display: none;
+  font-size: x-large;
+  padding: 0px 41px;
+}
+
+.projectlink:hover #githubicon{
+  display: block;
+}
+
+
+
 
 code{
   background-color: rgba(0, 0, 0, 0.18);
@@ -507,10 +529,9 @@ input[type="text"]::-webkit-input-placeholder {
 input[type="email"]::-webkit-input-placeholder {
   color: rgb(255, 255, 255);
 }
-textarea::-webkit-input-placeholder {
-  color: rgb(255, 255, 255);
+::placeholder{
+  color: white !important;
 }
-
 .submitbtn {
   display: flex;
   justify-content: center;
