@@ -5,6 +5,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+/*   background-color: #000000 !important;
+ */}
+
 /* -------------------------------------Navbar styling started------------------------------------------------ */
 nav.navbar {
   background-color: #001f3f;
@@ -26,9 +30,26 @@ a.nav-link {
   color: #ffffffe7;
   font-weight: 300;
 }
+a.nav-link::after {
+  content: ''; /* Use the data-text attribute as content */
+  color: #ffffffe7;
+  height: 2px;
+  font-weight: 300;
+  background-color: #FFB700; /* Background color of the morphing element */
+  color: #fff; /* Text color of the morphing element */
+  transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+a.nav-link:hover::after {
+  width: calc(100% - 20px); /* Expand the underline to 100% width minus padding */
+  left: 10px; /* Position the underline to the left edge of the link */
+}
+a.nav-link:hover {
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+}
 li.nav-item:hover {
+  background-color: rgb(255, 183, 0);
   transition: 0.2s;
-  background-color: rgba(255, 255, 255, 0.421);
   color: #ffffff;
   margin: 0 10px 0 10px;
   padding-left: 8px;
@@ -43,14 +64,24 @@ li.nav-item:hover {
   justify-content: center;
   align-items: center;
   margin: -51px 41px 0 41px;
-  border-right: solid black;
-  border-left: solid black;
+
+
 }
 
 div.aboutme {
   color: rgb(255, 255, 255);
   display: inline-block;
   padding: 40px 40px 40px 40px;
+}
+
+.svg-background4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  margin-top: 30px;
+  margin-left: 80px;
+  transform: rotate(360deg);
 }
 
 a.cntctme {
@@ -95,7 +126,7 @@ h1.headlineh1 {
 /* ----------------------------------------Skills Section-------------------------------------------------- */
 
 #skills {
-  background-color: rgba(255, 183, 0, 0.733);
+  background-color: rgb(255, 183, 0);
   padding: 30px 40px 30px 40px;
   margin: 0 41px;
   border-right: solid black;
@@ -247,10 +278,14 @@ h2.skillsh2 {
 #categoryhero {
   background: linear-gradient(
     90deg,
-    rgba(63, 247, 251, 0.4543067226890757) 0%,
-    rgba(70, 252, 189, 0.7036064425770308) 100%
+    rgb(63, 248, 251) 0%,
+    rgba(70, 252, 188, 0.977) 100%
   );
 }
+
+/*     rgba(63, 247, 251, 0.4543067226890757) 0%,
+    rgba(70, 252, 189, 0.7036064425770308) 100% */
+
 .categoryh1 {
   color: rgba(255, 255, 255, 0);
   font-size: 4rem;
@@ -268,15 +303,15 @@ button.categorybtns:hover {
   background-color: peachpuff;
 }
 
-button.categorybtns:active{
+button.categorybtns:active {
   background-color: rgb(255, 98, 0);
 }
 
 .certsec {
   background: linear-gradient(
     90deg,
-    rgba(63, 247, 251, 0.4543067226890757) 0%,
-    rgba(70, 252, 189, 0.7036064425770308) 100%
+    rgb(63, 248, 251) 0%,
+    rgb(70, 252, 188) 100%
   );
 }
 
@@ -332,87 +367,94 @@ button.categorybtns:active{
 
 /* ----------------------------------------Projects  Section-------------------------------------------------- */
 
-.projectssection{
+/* .projectssection{
   background: linear-gradient(
     90deg,
-    rgba(63, 66, 251, 0.454) 0%,
-    rgba(252, 149, 70, 0.704) 100%
-  );}
+    rgba(223, 251, 63, 0.773) 0%,
+    rgb(252, 149, 70) 100%
+  );} */
 
 
-.projectshero{
+.projectshero {
   height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: solid white;
-  background-size:cover ;
+  background-size: cover;
 }
 
-.projectsh1{
+.projectsh1 {
   text-align: center;
   color: rgba(255, 255, 255, 0);
   font-size: 4rem;
   font-size: 900;
   -webkit-text-stroke: 2px rgb(255, 255, 255);
   text-shadow: 0px 0px 10px rgb(0, 0, 0);
-
 }
 
-.projectscontainer{
+.projectscontainer {
   display: flex;
-  justify-content: space-around;
- flex-wrap: wrap;
- margin: 20px 30px ;
- color: white;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 30px;
+  color: rgb(0, 0, 0);
+  
 }
 
-.projectimg{
-  max-height: 40vh ;
-  margin: 0 10px 10px 10px ;
-  border-radius: 5px;
+.projectimg {
+  max-height: 50vh;
+  margin: 0 10px 10px 10px;
+  border-radius: 8px;
 }
 
-.aboutproject{
+.aboutproject {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.355);
-  padding: 20px;
+  background-color: rgb(255, 183, 0);
+  padding: 18px;
   border-radius: 8px;
-  margin: 0 0 10px 0 ;
+  margin: 0 0 10px 0;
+  box-shadow: 0px 0px 8px rgba(200, 150, 0, 0.7)
+  ;
 }
 
-.aboutpj{
+.aboutpj {
   font-size: 2rem;
   font-size: 900;
-  -webkit-text-stroke: 2px rgb(255, 255, 255);
-  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  font-weight: 400;
+
 }
 
-.pjlinkcont{
+.pjlinkcont {
   display: flex;
   justify-content: center;
 }
 
-.projectlink{
+.projectlink {
   text-decoration: none;
-  color: rgb(0, 0, 0);
-  background-color: white;
+  color: rgb(255, 255, 255);
+  background-color: rgb(62, 62, 62);
   padding: 8px;
   border-radius: 8px;
   margin-top: 10px;
   transition: 0.5s;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.198);
+
+  font-weight: 700;
 }
 
-.projectlink:hover{
+.projectlink:hover {
   background-color: black;
   color: white;
 }
 
-.projectlink:hover .githublogo{
+.projectlink:hover .githublogo {
   display: none;
   color: white;
   background-color: #000000;
@@ -421,27 +463,24 @@ button.categorybtns:active{
 /* .githublogo{
   display: none;
 } */
-#githubicon{
+#githubicon {
   display: none;
   font-size: x-large;
   padding: 0px 41px;
 }
 
-.projectlink:hover #githubicon{
+.projectlink:hover #githubicon {
   display: block;
 }
 
-
-
-
-code{
+code {
   background-color: rgba(0, 0, 0, 0.18);
   padding: 5px;
   border-radius: 5px;
   margin: 5px;
 }
 
-.tools{
+.tools {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -464,7 +503,6 @@ code{
   height: 40vh;
   width: 100%;
 }
-
 
 /* ----------------------------------------Resume  Section-------------------------------------------------- */
 
@@ -524,7 +562,7 @@ input[type="text"]::-webkit-input-placeholder {
 input[type="email"]::-webkit-input-placeholder {
   color: rgb(255, 255, 255);
 }
-::placeholder{
+::placeholder {
   color: white !important;
 }
 .submitbtn {
@@ -572,7 +610,6 @@ a.footer-links:hover {
   }
 }
 
-
 /* Media query for laptops */
 @media (max-width: 1024px) {
   h1.headlineh1,
@@ -591,7 +628,7 @@ a.footer-links:hover {
   h1.achievementsh1,
   h1.contactmeh1,
   h1.categoryh1 {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
   }
 }
 
