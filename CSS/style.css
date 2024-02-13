@@ -5,13 +5,12 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-/*   background-color: #000000 !important;
- */}
+/* #68866e #fada5e */
 
 /* -------------------------------------Navbar styling started------------------------------------------------ */
 nav.navbar {
-  background-color: #001f3f;
+  background: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+  backdrop-filter: blur(10px); /* Add blur effect */
   padding: 15px;
   font-size: large;
 }
@@ -20,6 +19,7 @@ a.navbar-brand {
 }
 ul {
   margin: 0 40px 0 0;
+  text-align: center;
 }
 li.nav-item {
   margin: 0px 10px 0px 10px;
@@ -27,32 +27,12 @@ li.nav-item {
   border-radius: 4px;
 }
 a.nav-link {
-  color: #ffffffe7;
+  color: #000000e7;
   font-weight: 300;
 }
-a.nav-link::after {
-  content: ''; /* Use the data-text attribute as content */
-  color: #ffffffe7;
-  height: 2px;
-  font-weight: 300;
-  background-color: #FFB700; /* Background color of the morphing element */
-  color: #fff; /* Text color of the morphing element */
-  transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
-}
-a.nav-link:hover::after {
-  width: calc(100% - 20px); /* Expand the underline to 100% width minus padding */
-  left: 10px; /* Position the underline to the left edge of the link */
-}
+
 a.nav-link:hover {
-  color: rgb(255, 255, 255);
-  font-weight: 300;
-}
-li.nav-item:hover {
-  background-color: rgb(255, 183, 0);
-  transition: 0.2s;
-  color: #ffffff;
-  margin: 0 10px 0 10px;
-  padding-left: 8px;
+  color: rgb(255, 0, 0);
 }
 /* -------------------------------------Navbar styling Ended------------------------------------------------ */
 
@@ -63,9 +43,7 @@ li.nav-item:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: -51px 41px 0 41px;
-
-
+  height: 100vh;
 }
 
 div.aboutme {
@@ -74,30 +52,20 @@ div.aboutme {
   padding: 40px 40px 40px 40px;
 }
 
-.svg-background4 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  margin-top: 30px;
-  margin-left: 80px;
-  transform: rotate(360deg);
-}
-
 a.cntctme {
+  text-align: center;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  padding: 10px;
-  margin: 20px 5px 0 0;
-  border-color: whitesmoke;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.732);
+  padding: 18px 40px;
+  margin: 20px 10px 0 0;
+  border: 2px solid whitesmoke;
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255);
 }
 a.cntctme:hover {
-  background-color: rgba(255, 255, 255, 0.981);
-  transition: 0.3s;
-  color: rgb(0, 0, 0);
-  padding: 10px 15px 10px 15px;
+  transition: 0.3s ease-in;
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 div.profileimg {
@@ -111,6 +79,8 @@ img.prfimg {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  background: rgba(118, 18, 18, 0.5); /* Adjust opacity as needed */
+  backdrop-filter: blur(50px); /* Add blur effect */
 }
 
 h1.headlineh1 {
@@ -126,60 +96,85 @@ h1.headlineh1 {
 /* ----------------------------------------Skills Section-------------------------------------------------- */
 
 #skills {
-  background-color: rgb(255, 183, 0);
+  background-color: #fada5e;
   padding: 30px 40px 30px 40px;
-  margin: 0 41px;
-  border-right: solid black;
-  border-left: solid black;
+  /*   margin: 0 41px;
+ */ /*  border-right: solid black;
+  border-left: solid black; */
 }
 
-h2.skillsh2 {
-  color: rgba(255, 255, 255, 0);
-  font-size: 4rem;
-  font-size: 900;
-  -webkit-text-stroke: 2px rgb(0, 0, 0);
+.skillsh2 {
+  color: #333;
+  font-size: 3rem;
+  font-weight: bold;
   text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
-.carouselsk {
+.highlight {
+  color: #68866e;
+}
+
+.skills-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px;
 }
 
-.skills-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 70px 0 70px;
-  margin: 15px 30px 15px 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.445);
-  background-color: white;
+.skill {
+  text-align: center;
   transition: transform 0.2s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.skills-logo:hover {
-  transform: translateY(-5px);
+.skill:hover {
+  transform: translateY(-10px);
+}
+
+.skill-logo {
+  width: 80px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.skill-name {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.skill:hover .skill-logo {
+  filter: grayscale(0%);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ----------------------------------------Skills Section-------------------------------------------------- */
 /* ----------------------------------------Achievements  Section-------------------------------------------------- */
 
 #achievements {
-  background: rgb(251, 63, 139);
-  background: radial-gradient(
-    circle,
-    rgb(63, 195, 251) 0%,
-    rgb(255, 255, 255) 100%
-  );
+  background-color: #68866e;
   padding: 30px 40px 30px 40px;
-  margin: 0 41px;
+  /*   margin: 0 41px;
   border-right: solid black;
-  border-left: solid black;
+  border-left: solid black; */
 }
 
 .achievementsh1 {
+  font-family: "Montserrat", sans-serif;
+
   color: white;
   color: rgba(255, 255, 255, 0);
   font-size: 4rem;
@@ -213,9 +208,15 @@ h2.skillsh2 {
   background-color: white;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   margin: 10px 0 0 0;
-  padding: 20px 20px 20px 20px;
-  border-radius: 6px;
+  padding: 18px 40px;
+  border-radius: 50px;
+  border: white 2px solid;
   transition: 0.5s ease;
+}
+
+.knowmore:hover {
+  background-color: rgba(255, 255, 255, 0.287) !important;
+  transform: scale(1.1);
 }
 
 @media (max-width: 450px) {
@@ -225,24 +226,17 @@ h2.skillsh2 {
   }
 }
 
-.knowmore:hover {
-  transform: scale(1.1);
-}
-
 /* ----------------------------------------Achievements  Section-------------------------------------------------- */
 
 /* ----------------------------------------Experience  Section-------------------------------------------------- */
 
 #experience {
   padding: 30px 40px 30px 40px;
-  margin: 0 41px;
-  border-right: solid black;
-  border-left: solid black;
 }
 
 .experience {
-  background-color: #00000092;
-  border: 1px solid #000000;
+  background: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+  backdrop-filter: blur(10px); /* Add blur effect */
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
@@ -283,9 +277,6 @@ h2.skillsh2 {
   );
 }
 
-/*     rgba(63, 247, 251, 0.4543067226890757) 0%,
-    rgba(70, 252, 189, 0.7036064425770308) 100% */
-
 .categoryh1 {
   color: rgba(255, 255, 255, 0);
   font-size: 4rem;
@@ -295,12 +286,13 @@ h2.skillsh2 {
 
 button.categorybtns {
   margin: 5px;
+  padding: 9px 20px;
   background-color: rgba(255, 255, 255, 0.484);
 }
 
 button.categorybtns:hover {
   color: white;
-  background-color: peachpuff;
+  border: peachpuff 2px solid;
 }
 
 button.categorybtns:active {
@@ -366,43 +358,30 @@ button.categorybtns:active {
 /* ----------------------------------------Achievements PT-II  Section-------------------------------------------------- */
 
 /* ----------------------------------------Projects  Section-------------------------------------------------- */
-
-/* .projectssection{
-  background: linear-gradient(
-    90deg,
-    rgba(223, 251, 63, 0.773) 0%,
-    rgb(252, 149, 70) 100%
-  );} */
-
-
-.projectshero {
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: solid white;
-  background-size: cover;
-}
-
-.projectsh1 {
-  text-align: center;
-  color: rgba(255, 255, 255, 0);
-  font-size: 4rem;
-  font-size: 900;
-  -webkit-text-stroke: 2px rgb(255, 255, 255);
-  text-shadow: 0px 0px 10px rgb(0, 0, 0);
-}
-
 .projectscontainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 20px 30px;
   color: rgb(0, 0, 0);
-  
 }
 
-.projectimg {
+.rectcont {
+  height: 56vh;
+  width: 40vh;
+  border-radius: 42px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 0px 11px 0px rgba(0, 0, 0, 0.759);
+  margin: 10px;
+}
+
+.rectcont:hover .pjlinkcont {
+  opacity: 1;
+}
+
+/* .projectimg {
   max-height: 50vh;
   margin: 0 10px 10px 10px;
   border-radius: 8px;
@@ -418,8 +397,7 @@ button.categorybtns:active {
   padding: 18px;
   border-radius: 8px;
   margin: 0 0 10px 0;
-  box-shadow: 0px 0px 8px rgba(200, 150, 0, 0.7)
-  ;
+  box-shadow: 0px 0px 8px rgba(200, 150, 0, 0.7);
 }
 
 .aboutpj {
@@ -428,41 +406,46 @@ button.categorybtns:active {
   -webkit-text-stroke: 2px rgb(0, 0, 0);
   text-shadow: 0px 0px 10px rgb(255, 255, 255);
   font-weight: 400;
+} */
 
-}
+/* GITHUB ICON ANIMATION */
 
 .pjlinkcont {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
+
 
 .projectlink {
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  background-color: rgb(62, 62, 62);
-  padding: 8px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 251, 0);
+  padding: 18px 40px;
+  border-radius: 50px !important;
   border-radius: 8px;
-  margin-top: 10px;
+  margin-top: 200px;
   transition: 0.5s;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.198);
-
   font-weight: 700;
 }
 
 .projectlink:hover {
-  background-color: black;
-  color: white;
+  background-color: rgb(255, 251, 0);
+
+  color: rgb(0, 0, 0);
 }
 
 .projectlink:hover .githublogo {
   display: none;
-  color: white;
-  background-color: #000000;
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+  
 }
 
-/* .githublogo{
-  display: none;
-} */
 #githubicon {
   display: none;
   font-size: x-large;
@@ -472,6 +455,7 @@ button.categorybtns:active {
 .projectlink:hover #githubicon {
   display: block;
 }
+/* GITHUB ICON ANIMATION */
 
 code {
   background-color: rgba(0, 0, 0, 0.18);
@@ -509,18 +493,19 @@ code {
 /* ----------------------------------------Contact Me  Section-------------------------------------------------- */
 
 #contactme {
-  margin: 0 41px;
-  background: radial-gradient(
-    circle,
-    rgb(255, 255, 255) 0%,
-    rgba(70, 208, 252, 1) 100%
+  background-image: linear-gradient(
+    135deg,
+    #68866e 0%,
+    #fada5e 50%,
+    #a0a0a0 100%
   );
+
   padding: 30px 40px 30px 40px;
-  border-right: solid black;
-  border-left: solid black;
 }
 
 .contactmeh1 {
+  font-family: "Montserrat", sans-serif;
+
   color: white;
   text-align: center;
   padding: 10px;
@@ -571,16 +556,19 @@ input[type="email"]::-webkit-input-placeholder {
 }
 
 button.submitnow {
-  padding: 8px 40px 8px 40px;
-  background-color: #07b1ffba;
+  padding: 15px 30px;
+  background-color: #ffa407e7;
   color: rgba(0, 0, 0, 0.609);
-  border: none;
 }
 button.submitnow:hover {
+  border: 2px solid black;
   color: black;
-  background-color: #13eb21b3;
+  background-color: none;
 }
 
+.alertmessage {
+  color: red;
+}
 /* ----------------------------------------Contact Me  Section-------------------------------------------------- */
 
 /* ----------------------------------------Footer  Section-------------------------------------------------- */
