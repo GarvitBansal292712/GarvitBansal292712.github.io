@@ -9,10 +9,10 @@
 
 /* -------------------------------------Navbar styling started------------------------------------------------ */
 nav.navbar {
-  background: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
-  backdrop-filter: blur(10px); /* Add blur effect */
+  background: rgba(255, 255, 255, 0.5);
   padding: 15px;
-  font-size: large;
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif !important;
 }
 a.navbar-brand {
   color: #ffffff;
@@ -32,7 +32,15 @@ a.nav-link {
 }
 
 a.nav-link:hover {
-  color: rgb(255, 0, 0);
+  border-bottom: 2px solid white !important;
+  color: rgb(255, 255, 255);
+  transition: 0.3s ease-in;
+}
+
+@media (max-width: 991px) {
+  #offcanvasNavbar {
+    font-size: 2rem;
+  }
 }
 /* -------------------------------------Navbar styling Ended------------------------------------------------ */
 
@@ -165,7 +173,11 @@ h1.headlineh1 {
 /* ----------------------------------------Achievements  Section-------------------------------------------------- */
 
 #achievements {
-  background-color: #68866e;
+  /* background-color: #68866e; */
+  background-image: url(../IMAGES/pexels-katrin-bolovtsova-7307623.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding: 30px 40px 30px 40px;
   /*   margin: 0 41px;
   border-right: solid black;
@@ -270,18 +282,15 @@ h1.headlineh1 {
 /* ----------------------------------------Achievements  PT-II  Section-------------------------------------------------- */
 
 #categoryhero {
-  background: linear-gradient(
-    90deg,
-    rgb(63, 248, 251) 0%,
-    rgba(70, 252, 188, 0.977) 100%
-  );
+  /* background-color: rgb(255, 89, 0); */
+  background-color: #fdd537;
 }
 
 .categoryh1 {
   color: rgba(255, 255, 255, 0);
   font-size: 4rem;
   font-size: 900;
-  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  -webkit-text-stroke: 2px rgb(255, 89, 0);
 }
 
 button.categorybtns {
@@ -291,8 +300,8 @@ button.categorybtns {
 }
 
 button.categorybtns:hover {
-  color: white;
-  border: peachpuff 2px solid;
+  color: rgb(0, 0, 0);
+  border: rgb(0, 0, 0) 2px solid;
 }
 
 button.categorybtns:active {
@@ -300,11 +309,7 @@ button.categorybtns:active {
 }
 
 .certsec {
-  background: linear-gradient(
-    90deg,
-    rgb(63, 248, 251) 0%,
-    rgb(70, 252, 188) 100%
-  );
+  background-color: #f6d03b;
 }
 
 .certificate-item {
@@ -419,7 +424,6 @@ button.categorybtns:active {
   transition: opacity 0.3s;
 }
 
-
 .projectlink {
   text-decoration: none;
   color: rgb(0, 0, 0);
@@ -443,7 +447,6 @@ button.categorybtns:active {
   display: none;
   color: rgb(0, 0, 0);
   background-color: rgb(0, 0, 0);
-  
 }
 
 #githubicon {
