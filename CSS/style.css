@@ -52,6 +52,13 @@ a.nav-link:hover {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: rgba(0, 0, 0, 0.5)
+    url("../IMAGES/seahorse-arizona-lower-antelope-canyon.jpg") !important;
+  background-blend-mode: darken !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-position: center !important;
 }
 
 div.aboutme {
@@ -174,11 +181,11 @@ h1.headlineh1 {
 
 #achievements {
   /* background-color: #68866e; */
-  background-image: url(../IMAGES/pexels-katrin-bolovtsova-7307623.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 30px 40px 30px 40px;
+  background-image: url(../IMAGES/pexels-katrin-bolovtsova-7307623.jpg) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  padding: 30px 40px 30px 40px !important;
   /*   margin: 0 41px;
   border-right: solid black;
   border-left: solid black; */
@@ -243,7 +250,13 @@ h1.headlineh1 {
 /* ----------------------------------------Experience  Section-------------------------------------------------- */
 
 #experience {
-  padding: 30px 40px 30px 40px;
+  padding: 30px 40px 30px 40px !important;
+  background: rgba(0, 0, 0, -5)
+    url("../IMAGES/pexels-francesco-ungaro-96381.jpg") !important;
+  background-blend-mode: darken !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
 
 .experience {
@@ -253,6 +266,12 @@ h1.headlineh1 {
   padding: 20px;
   margin-bottom: 20px;
   transition: transform 0.3s ease;
+}
+
+.exp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .experience:hover {
@@ -284,6 +303,15 @@ h1.headlineh1 {
 #categoryhero {
   /* background-color: rgb(255, 89, 0); */
   background-color: #fdd537;
+}
+
+.bannerbg {
+  background: rgba(0, 0, 0, 0.3) url("../IMAGES/first-place-medal.jpg")!important;
+  background-blend-mode: darken!important;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+  background-attachment: fixed!important;
+  background-position: center!important;
 }
 
 .categoryh1 {
@@ -374,7 +402,7 @@ button.categorybtns:active {
 .rectcont {
   height: 56vh;
   width: 40vh;
-  border-radius: 42px;
+  /* border-radius: 42px; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -628,6 +656,45 @@ a.footer-links:hover {
   h1 {
     font-size: 1.5rem; /* Adjust font size for larger smartphones (1.5/4 of the base size) */
     /* Add other styles as needed */
+  }
+
+  /* Removing the Parallax Effect For Mobile Devices as It doesn't work properly */
+  #about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5)
+      url("../IMAGES/seahorse-arizona-lower-antelope-canyon.jpg") !important;
+    background-blend-mode: darken !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  #achievements {
+    background-image: url(../IMAGES/pexels-katrin-bolovtsova-7307623.jpg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 30px 40px 30px 40px !important;
+    background-attachment: local !important;
+  }
+
+  #experience {
+    padding: 30px 40px 30px 40px !important;
+    background: rgba(0, 0, 0, -5)
+      url("../IMAGES/pexels-francesco-ungaro-96381.jpg") !important;
+    background-blend-mode: darken !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+
+  .bannerbg {
+    background: rgba(0, 0, 0, 0.3) url("../IMAGES/first-place-medal.jpg")!important;
+    background-blend-mode: darken!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
   }
 }
 
