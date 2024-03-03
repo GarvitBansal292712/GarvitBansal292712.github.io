@@ -306,12 +306,12 @@ h1.headlineh1 {
 }
 
 .bannerbg {
-  background: rgba(0, 0, 0, 0.3) url("../IMAGES/first-place-medal.jpg")!important;
-  background-blend-mode: darken!important;
-  background-repeat: no-repeat!important;
-  background-size: cover!important;
-  background-attachment: fixed!important;
-  background-position: center!important;
+  background: rgba(0, 0, 0, 0.3) url("../IMAGES/first-place-medal.jpg") !important;
+  background-blend-mode: darken !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
 }
 
 .categoryh1 {
@@ -414,60 +414,49 @@ button.categorybtns:active {
   opacity: 1;
 }
 
-/* .projectimg {
-  max-height: 50vh;
-  margin: 0 10px 10px 10px;
-  border-radius: 8px;
-}
 
-.aboutproject {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: rgb(255, 183, 0);
-  padding: 18px;
-  border-radius: 8px;
-  margin: 0 0 10px 0;
-  box-shadow: 0px 0px 8px rgba(200, 150, 0, 0.7);
-}
-
-.aboutpj {
-  font-size: 2rem;
-  font-size: 900;
-  -webkit-text-stroke: 2px rgb(0, 0, 0);
-  text-shadow: 0px 0px 10px rgb(255, 255, 255);
-  font-weight: 400;
-} */
-
-/* GITHUB ICON ANIMATION */
-
-.pjlinkcont {
+/* .pjlinkcont {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: opacity 0.3s;
+  z-index: 2;
+} */
+
+.projectimages{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.projectimages img{
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.55);
+}
+
+/* GITHUB ICON ANIMATION */
+
+
 .projectlink {
+  position: absolute;
   text-decoration: none;
   color: rgb(0, 0, 0);
   background-color: rgb(255, 251, 0);
   padding: 18px 40px;
   border-radius: 50px !important;
   border-radius: 8px;
-  margin-top: 200px;
-  transition: 0.5s;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.198);
   font-weight: 700;
+ opacity: 0; 
+ transition: opacity 0.5s ease-in!important; /* Apply transition */
 }
 
 .projectlink:hover {
   background-color: rgb(255, 251, 0);
-
+  
   color: rgb(0, 0, 0);
 }
 
@@ -481,10 +470,15 @@ button.categorybtns:active {
   display: none;
   font-size: x-large;
   padding: 0px 41px;
+  transition: opacity 0.5s ease; /* Smooth opacity transition */
 }
-
 .projectlink:hover #githubicon {
   display: block;
+
+}
+
+.projectimages:hover .projectlink{
+opacity: 1;
 }
 /* GITHUB ICON ANIMATION */
 
@@ -501,6 +495,7 @@ code {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 /* ----------------------------------------Projects  Section-------------------------------------------------- */
 
 /* ----------------------------------------Resume  Section-------------------------------------------------- */
@@ -691,10 +686,10 @@ a.footer-links:hover {
   }
 
   .bannerbg {
-    background: rgba(0, 0, 0, 0.3) url("../IMAGES/first-place-medal.jpg")!important;
-    background-blend-mode: darken!important;
-    background-repeat: no-repeat!important;
-    background-size: cover!important;
+    background: rgba(0, 0, 0, 0.3) url("../IMAGES/first-place-medal.jpg") !important;
+    background-blend-mode: darken !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
   }
 }
 
