@@ -260,11 +260,12 @@ h1.headlineh1 {
 }
 
 .experience {
-  background: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+  background: rgba(248, 246, 95, 0.5); /* Adjust opacity as needed */
   backdrop-filter: blur(10px); /* Add blur effect */
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
+  border: 2px solid #fada5e;
   transition: transform 0.3s ease;
 }
 
@@ -390,7 +391,10 @@ button.categorybtns:active {
 
 /* ----------------------------------------Achievements PT-II  Section-------------------------------------------------- */
 
+
 /* ----------------------------------------Projects  Section-------------------------------------------------- */
+
+
 .projectscontainer {
   display: flex;
   justify-content: space-evenly;
@@ -412,6 +416,14 @@ button.categorybtns:active {
 
 .rectcont:hover .pjlinkcont {
   opacity: 1;
+}
+
+.projectsabout{
+  border: 2px solid white;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 18px;
+  background-color: white;
 }
 
 
@@ -483,7 +495,7 @@ opacity: 1;
 /* GITHUB ICON ANIMATION */
 
 code {
-  background-color: rgba(0, 0, 0, 0.18);
+  background-color: rgb(0, 0, 0);
   padding: 5px;
   border-radius: 5px;
   margin: 5px;
