@@ -423,7 +423,7 @@ button.categorybtns:active {
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 18px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.287);
 }
 
 
