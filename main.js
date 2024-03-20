@@ -1,4 +1,6 @@
 
+  // Navbar Hide and show Logic
+
   function openPdf(pdfUrl) {
 
   
