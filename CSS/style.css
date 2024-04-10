@@ -134,9 +134,7 @@ h1.headlineh1 {
 #skills {
   /* background-color: #fada5e; */
   padding: 30px 40px 30px 40px;
-  /*   margin: 0 41px;
- */ /*  border-right: solid black;
-  border-left: solid black; */
+
 }
 
 .skillsh2 {
@@ -144,12 +142,7 @@ h1.headlineh1 {
   font-family: "Montserrat", sans-serif;
   font-size: 6rem;
   text-align: center;
-  font-weight: 400;
-  /* color: #333;
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  font-family: "Montserrat", sans-serif; */
+
 }
 
 .skills-container {
@@ -265,19 +258,20 @@ h1.headlineh1 {
   white-space: nowrap;
   text-align: center;
   text-transform: capitalize;
-  /* display: flex; 
-  align-items: center;
-  position: absolute; 
-  right: 0; 
-  text-align: center;
-  top: -50px; 
-  transform-origin: bottom right; 
-  z-index: 1; */
-}
-
-.code{
 
 }
+
+
+  code {
+    background-color: white; padding: 8px; 
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  code:hover{
+    background-color: #fff;
+  }
+
 
 .expgitlogo{
   color: rgb(255, 255, 255); font-size: 2rem;
@@ -307,9 +301,7 @@ h1.headlineh1 {
     rgba(0, 0, 0, 1) 70%,
     rgba(0, 0, 0, 1) 100%
   );
-  /*  background:rgb(94, 94, 94) url(IMAGES/figmaimg.jpeg);
-  background-size: cover; background-position: center;
-  background-blend-mode: darken; */
+
   border: none;
   box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
   cursor: pointer;
@@ -325,16 +317,12 @@ h1.headlineh1 {
 /* ----------------------------------------Achievements  Section-------------------------------------------------- */
 
 #achievements {
-  /* background-color: #68866e; */
-  /* background-image: url(../IMAGES/pexels-katrin-bolovtsova-7307623.jpg) !important; */
   background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed !important;
   padding: 30px 40px 30px 40px !important;
   margin: 60px 0px;
-  /*   margin: 0 41px;
-  border-right: solid black;
-  border-left: solid black; */
+
 }
 
 .achievementsh1 {
@@ -343,15 +331,6 @@ h1.headlineh1 {
   font-size: 6rem;
   text-align: center;
   font-weight: 400;
-  /* font-family: "Montserrat", sans-serif;
-
-  color: white;
-  color: rgba(255, 255, 255, 0);
-  font-size: 4rem;
-  font-size: 900;
-  -webkit-text-stroke: 2px white;
-
-  text-align: center; */
   margin-bottom: 20px;
 }
 
@@ -400,49 +379,7 @@ h1.headlineh1 {
 
 /* ----------------------------------------Experience  Section-------------------------------------------------- */
 
-/* .experience {
-  background: rgba(
-    255,
-    255,
-    255,
-    0.424
-  ); 
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s ease; 
-}
 
-.experience:hover {
-  transform: translateY(-5px); 
-}
-
-.company-logo img {
-  max-width: 100px; 
-  height: auto; 
-  display: block; 
-  margin-bottom: 15px; 
-}
-
-.experience-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.experience-date {
-  font-size: 14px;
-  color: #777; 
-  margin-bottom: 15px;
-}
-
-.experience-description {
-  font-size: 16px;
-  color: #666; 
-  line-height: 1.6; 
-} */
 .expsscont {
   text-align: center;
   max-width: 800px;
@@ -676,11 +613,6 @@ h2.featurette-heading {
 }
 /* GITHUB ICON ANIMATION */
 
-code {
-  background-color: white; padding: 8px;
-  border-radius: 5px;
-  margin: 5px;
-}
 
 .tools {
   display: flex;
