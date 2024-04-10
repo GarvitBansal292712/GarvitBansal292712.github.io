@@ -32,7 +32,6 @@ li.nav-item {
 a.nav-link {
   color: #ffffffe7;
   font-weight: 300;
-
 }
 
 a.nav-link:hover {
@@ -98,8 +97,7 @@ a.cntctme {
   border: 2px solid whitesmoke;
   border-radius: 50px;
   background-color: rgb(255, 255, 255);
-  transition:0.3s ease-in-out;
-
+  transition: 0.3s ease-in-out;
 }
 a.cntctme:hover {
   color: rgb(255, 255, 255);
@@ -214,8 +212,8 @@ h1.headlineh1 {
 .myoverpj {
   background-size: cover !important;
   background-position: center !important;
-  width: 400px;
-  height: 70vh;
+  width: 500px;
+  height: 90vh;
   margin: 10px 0px;
   display: flex;
   justify-content: flex-end; /* Aligns content to the right side */
@@ -223,18 +221,70 @@ h1.headlineh1 {
   position: relative; /* Allows positioning of children elements */
   overflow: hidden; /* Hides overflow content */
   background-blend-mode: darken !important;
+  padding: 40px;
 }
 
+.experiment {
+  position: absolute;
+  align-items: center;
+  padding: 8px;
+  background-color: #00000082;
+  color: white;
+  top: 50%;
+  right: 0%;
+  opacity: 0;
+
+  width: 100%;
+  height: 50%;
+  z-index: 10;
+  transform: translateY(100%);
+  /* Add transition */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+.myoverpj:hover .experiment {
+  opacity: 1;
+  transform: translateY(0);
+  /* Apply animation */
+  animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .rotate-270 {
-  transform: rotate(270deg);
-  display: flex; /* Change display to flex */
-  align-items: center; /* Align items vertically */
-  position: absolute; /* Allows absolute positioning */
-  right: 0; /* Positions the element to the right */
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: rgb(0, 242, 255);
+  font-weight: 100;
+  white-space: nowrap;
   text-align: center;
-  top: -50px; /* Adjust as needed to vertically center */
-  transform-origin: bottom right; /* Rotates from bottom right corner */
-  z-index: 1;
+  text-transform: capitalize;
+  /* display: flex; 
+  align-items: center;
+  position: absolute; 
+  right: 0; 
+  text-align: center;
+  top: -50px; 
+  transform-origin: bottom right; 
+  z-index: 1; */
+}
+
+.code{
+
+}
+
+.expgitlogo{
+  color: rgb(255, 255, 255); font-size: 2rem;
+}
+
+.expgitlogo:hover{
+  color: #00ffff;
 }
 
 .h1overpj {
@@ -256,7 +306,7 @@ h1.headlineh1 {
     rgba(64, 64, 162, 0.5) 50%,
     rgba(0, 0, 0, 1) 70%,
     rgba(0, 0, 0, 1) 100%
-  ); 
+  );
   /*  background:rgb(94, 94, 94) url(IMAGES/figmaimg.jpeg);
   background-size: cover; background-position: center;
   background-blend-mode: darken; */
@@ -267,15 +317,9 @@ h1.headlineh1 {
   transition: transform 0.3s ease-in-out;
 }
 
-.projectsoverbtn:hover{
-
-
+.projectsoverbtn:hover {
   transform: translateY(-10px);
-
-  
 }
-
-
 
 /* ----------------------------------------Projects Overview Section-------------------------------------------------- */
 /* ----------------------------------------Achievements  Section-------------------------------------------------- */
@@ -633,8 +677,7 @@ h2.featurette-heading {
 /* GITHUB ICON ANIMATION */
 
 code {
-  background-color: rgb(0, 0, 0);
-  padding: 5px;
+  background-color: white; padding: 8px;
   border-radius: 5px;
   margin: 5px;
 }
