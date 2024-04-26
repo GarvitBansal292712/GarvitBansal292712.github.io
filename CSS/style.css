@@ -59,6 +59,10 @@ a.nav-link:active {
   align-items: center;
 }
 
+.navbarclosebtn:focus{
+outline: none;
+}
+
 @media (max-width: 991px) {
   #offcanvasNavbar {
     font-size: 2rem;
@@ -235,7 +239,10 @@ h1.headlineh1 {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   cursor: pointer;
 }
-.myoverpj:hover .experiment {
+.mockup{
+  overflow: hidden;
+}
+.mockup:hover .experiment {
   opacity: 1;
   transform: translateY(0);
   /* Apply animation */
@@ -538,6 +545,7 @@ button.categorybtns:active {
   margin-bottom: 15px;
   border-radius: 18px;
   background-color: rgba(255, 255, 255, 0.287);
+  width: 30vw;
 }
 
 h2.featurette-heading {
