@@ -269,8 +269,9 @@ h1.headlineh1 {
 }
 
 
-  code {
-    background-color: white; padding: 8px; 
+  .code {
+    background-color: white;
+     padding: 8px; 
     border-radius: 5px;
     margin: 5px;
   }
@@ -279,6 +280,12 @@ h1.headlineh1 {
     background-color: #fff;
   }
 
+  .codeofspend{
+    background-color: white;
+     padding: 8px; 
+    border-radius: 5px;
+
+  }
 
 .expgitlogo{
   color: rgb(255, 255, 255); font-size: 2rem;
